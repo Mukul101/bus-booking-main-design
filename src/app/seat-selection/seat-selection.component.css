@@ -1,0 +1,70 @@
+/* Container for the seat layout */
+.seat-selection-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Style for each row of seats */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+/* Style for each seat */
+.seat-item {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Aisle style */
+.aisle {
+  width: 20px;
+  background-color: transparent;
+  cursor: default;
+}
+
+/* Hover effect for seats */
+.seat-item:hover {
+  background-color: #d0d0d0;
+}
+
+/* Selected seat style */
+.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Header styles */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Proceed button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}

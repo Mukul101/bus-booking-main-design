@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.home-container, .bus-list-container, .seat-selection-container, .passenger-info-container, .review-ticket-container, .view-ticket-container {
+    padding: 20px;
+  }
+
+  form div {
+    margin-bottom: 10px;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,48 @@
+<div class="bus-list-container">
+  <div
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('img2.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5; /* Sets the image opacity */
+      z-index: -1;
+    "
+  ></div>
+  <!-- Display the route and travel date -->
+  <div class="route-info">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Buses from {{ from }} to {{ to }}</mat-card-title>
+        <mat-card-subtitle>Travel Date: {{ travelDate }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+
+  <!-- List of available buses -->
+  <div *ngFor="let bus of buses" class="bus-item">
+    <mat-card>
+      <mat-card-content>
+        <p><strong>Bus Name:</strong> {{ bus.name }}</p>
+        <p><strong>Departure Time:</strong> {{ bus.departureTime }}</p>
+        <p><strong>Coach:</strong> {{ bus.coach }}</p>
+        <p><strong>Seats Available:</strong> {{ bus.seatsAvailable }}</p>
+        <p><strong>Fare:</strong> {{ bus.fare | currency }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          class="viewSeats"
+          mat-raised-button
+          color="primary"
+          (click)="viewSeats(bus)"
+        >
+          View Seats
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="seat-selection-container">
+  <div
+  style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Sets the image opacity */
+    z-index: -1;
+  "
+></div>
+  <h2>Select Your Seat</h2>
+
+  <div class="seat-grid">
+    <div class="row" *ngFor="let row of seats">
+      <div
+        class="seat-item"
+        *ngFor="let seat of row"
+        [ngClass]="{ selected: seat.isSelected, aisle: seat.isAisle }"
+        (click)="selectSeat(seat)"
+      >
+        {{ !seat.isAisle ? seat.seatNumber : "" }}
+      </div>
+    </div>
+  </div>
+
+  <button (click)="proceedToNextPage()">Proceed</button>
+</div>
